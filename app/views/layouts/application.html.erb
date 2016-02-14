@@ -15,10 +15,10 @@
     <!-- Left side -->
     <div class="header-left">
       <a class="header-tab is-active" href="/">
-        <i class="fa fa-home"></i>ホーム
+        <span class="icon"><i class="fa fa-home"></i></span>ホーム
       </a>
       <a class="header-tab" href="#">
-        <i class="fa fa-bell"></i>通知
+        <span class="icon"><i class="fa fa-bell"></i></span>通知
       </a>
     </div>
 
@@ -38,7 +38,7 @@
         <% end %>
       </span>
       <span class="header-item">
-        <a class="button is-medium">ツイート</a>
+        <a class="button is-medium"><i class="fa fa-pencil-square-o"></i>ツイート</a>
       </span>
     </span>
 
@@ -53,13 +53,13 @@
         <% end %>
       </span>
       <span class="header-item">
-        <a class="button is-medium is-primary">ツイート</a>
+        <a class="button is-medium is-primary"><i class="fa fa-pencil-square-o"></i>ツイート</a>
       </span>
     </div>
   </div>
   </header>
   <header>
-    <nav>
+    <nav class="navbar-right">
       <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
       <% if user_signed_in? %>
         <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->

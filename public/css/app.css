@@ -9,6 +9,27 @@
  * タイムライン
  */
 .tweet {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: block;
+}
+
+.tweet > .tweet-form {
+  width: 100%;
+}
+
+.tweet-form > textarea {
+  resize: none;
+}
+
+.tweet-button-panel {
+  text-align: right;
+}
+
+/*.media {
+  display: block;
+}*/
+.tweets {
   background: #fff;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
   padding: 20px;
