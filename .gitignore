@@ -3,3 +3,5 @@ log
 tmp
 
 *~
+node_modules
+public/dist/*

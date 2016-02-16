@@ -3,12 +3,63 @@
 <head>
   <title>TwitterClone</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jgthms/bulma/master/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/app.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="header">
+  <div class="container">
+    <!-- Left side -->
+    <div class="header-left">
+      <a class="header-tab is-active" href="/">
+        <span class="icon"><i class="fa fa-home"></i></span>ホーム
+      </a>
+      <a class="header-tab" href="#">
+        <span class="icon"><i class="fa fa-bell"></i></span>通知
+      </a>
+    </div>
+
+    <div class="header-center">
+      <a class="header-icon">
+        <a class="header-item" href="#">
+          <img src="img/twitter-bird.svg" alt="Logo">
+        </a>
+      </a>
+    </div>
+
+    <!-- Hamburger menu (on mobile) -->
+    <span class="header-toggle">
+      <span class="header-item">
+        <% if user_signed_in? %>
+        <%= current_user.email %>
+        <% end %>
+      </span>
+      <span class="header-item">
+        <a class="button is-medium"><i class="fa fa-pencil-square-o"></i>ツイート</a>
+      </span>
+    </span>
+
+    <!-- Right side -->
+    <div class="header-right header-menu">
+      <span class="header-item">
+        <input class="input" type="text" placeholder="Twitterを検索">
+      </span>
+      <span class="header-item">
+        <% if user_signed_in? %>
+        <%= current_user.email %>
+        <% end %>
+      </span>
+      <span class="header-item">
+        <a class="button is-medium is-primary"><i class="fa fa-pencil-square-o"></i>ツイート</a>
+      </span>
+    </div>
+  </div>
+  </header>
   <header>
-    <nav>
+    <nav class="navbar-right">
       <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
       <% if user_signed_in? %>
         <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
@@ -26,6 +77,6 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert%></p>
 <%= yield %>
-
+<script src="dist/app.js" charset="utf-8"></script>
 </body>
 </html>
