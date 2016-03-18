@@ -7,5 +7,10 @@ class Api::TweetController < ApplicationController
     render json: { status: 'OK' }
   end
 
+  def get_tweet
+    tweets = Tweet.tweets(current_user.id)
+    render json: { tweets: tweets.map(&:body) }
+  end
+
   private
 end
