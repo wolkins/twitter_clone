@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Api::TweetController, type: :controller do
-  describe "post #tweet" do 
+  describe "post #tweet" do
     let(:user) { FactoryGirl.create(:user) }
 
     before do
@@ -10,7 +10,7 @@ RSpec.describe Api::TweetController, type: :controller do
 
     it "success" do
       post :tweet, data: { tweet: 'aaa' }.to_json
-      expect(JSON.parse(response.body)).to eq({ "status" => "OK" })
+      expect(JSON.parse(response.body)).to eq("status" => "OK")
     end
   end
 end

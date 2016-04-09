@@ -5,7 +5,7 @@ class Tweet < ActiveRecord::Base
     where(user_id: user_id)
   end
 
-  scope :search, -> (word) do
+  scope :search, -> (_word) do
     where(arel_table[:body].matches('%word%'))
   end
 end
