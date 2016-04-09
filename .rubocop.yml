@@ -1,0 +1,65 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - db/migrate/*
+    - config/**/*
+    - spec/spec_helper.rb
+    - spec/rails_helper.rb
+    - bin/*
+
+AccessModifierIndentation:
+  Description: Check indentation of private/protected visibility modifiers.
+  Enabled: false
+
+# Use &&/|| instead of and/or.
+AndOr:
+  Enabled: false
+
+# Use only ascii symbols in identifiers.
+AsciiComments:
+  Enabled: false
+
+# Document classes and non-namespace modules.
+Documentation:
+  Enabled: false
+
+# Favor modifier if/unless usage when you have a single-line body.
+IfUnlessModifier:
+  Enabled: false
+
+# Use the lambda method for multi-line lambdas.
+Lambda:
+  Enabled: false
+
+# Limit lines to 79 characters.
+LineLength:
+  Max: 79
+  Enabled: false
+
+# Avoid methods longer than 10 lines of code.
+MethodLength:
+  Max: 20
+  Enabled: true
+
+# Don't use self where it's not needed.
+RedundantSelf:
+  Enabled: false
+
+# Checks for proper usage of fail and raise.
+SignalException:
+  Enabled: false
+
+# Prefer ' strings when you don't need string interpolation or special symbols.
+StringLiterals:
+  Enabled: false
+
+# Align block ends correctly.
+BlockAlignment:
+  Enabled: false
+
+# Avoid using {...} for multi-line blocks
+Blocks:
+  Enabled: false
+
+ClassAndModuleChildren:
+  Enabled: false
