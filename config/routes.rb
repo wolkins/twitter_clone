@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
   get 'home/show'
-  
-  scope '/api' do 
+
+  scope '/api' do
     post 'tweet' => 'api/tweet'
+    get 'user_timeline' => 'api/user_timeline'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
