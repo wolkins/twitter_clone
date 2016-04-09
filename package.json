@@ -9,7 +9,8 @@
     "test": "test"
   },
   "dependencies": {
-    "bulma": "0.0.13"
+    "bulma": "0.0.13",
+    "jquery": "^2.2.1"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.5.0",
